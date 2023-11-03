@@ -6,7 +6,7 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 
-router.get("/date", (req, res) => {
+router.get("/", (req, res) => {
   const date = new Date();
   res.json({ year: date });
 });

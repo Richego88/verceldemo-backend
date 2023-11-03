@@ -7,8 +7,14 @@ var indexRouter = require("./routes");
 var usersRouter = require("./routes/users");
 
 var app = express();
+
+var corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200,
+};
+
 const cors = require("cors");
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(logger("dev"));
 app.use(express.json());
